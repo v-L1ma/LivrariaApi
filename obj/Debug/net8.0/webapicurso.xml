@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapicurso</name>
+    </assembly>
+    <members>
+        <member name="M:webapicurso.Controllers.AutorController.ListarAutores">
+             <summary>
+             Exibe uma lista de todos os autores
+             </summary>
+             <param></param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET /Autor
+            
+             </remarks>
+             <response code="200">Retorna uma lista de autores</response>
+        </member>
+        <member name="M:webapicurso.Controllers.AutorController.BuscarAutorPorId(System.Int32)">
+             <summary>
+             Traz informações de um autor usando o ID dele
+             </summary>
+             <param name="idAutor">Numero de identificação do autor</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET /Autor/1
+            
+             </remarks>
+             <response code="200">Retorna todas as informações de um autor</response>
+        </member>
+        <member name="M:webapicurso.Controllers.AutorController.BuscarAutorPorIdLivro(System.Int32)">
+             <summary>
+             Traz informações de um autor usando o ID de um livro
+             </summary>
+             <param name="idLivro">Numero de identificação do livro</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET /Autor/livro/1
+            
+             </remarks>
+             <response code="200">Retorna uma lista de autores</response>
+        </member>
+        <member name="M:webapicurso.Controllers.AutorController.CriarAutor(AutorDto)">
+             <summary>
+             Cadastra um novo autor
+             </summary>
+             <param></param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 POST /Autor{
+                     Nome: "Vinicius",
+                     Sobrenome: "Lima"
+                 }
+            
+             </remarks>
+             <response code="200">Retorna uma lista de autores</response>
+        </member>
+        <member name="M:webapicurso.Controllers.AutorController.EditarAutor(System.Int32,AutorDto)">
+             <summary>
+             Edita as informações de um autor já cadastrado
+             </summary>
+             <param name="idAutor">Numero de indentificacao do autor</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 PUT /Autor/1{
+                     Nome: "Vinicius",
+                     Sobrenome: "Lima"
+                 }
+            
+             </remarks>
+             <response code="200">Retorna uma lista de autores</response>
+        </member>
+        <member name="M:webapicurso.Controllers.AutorController.ExcluirAutor(System.Int32)">
+             <summary>
+             Exclui o cadastro de um autor
+             </summary>
+             <param name="idAutor">Numero de indentificacao do autor</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 DELETE /Autor/1
+            
+             </remarks>
+             <response code="200">Retorna uma lista de autores</response>
+        </member>
+        <member name="T:webapicurso.Migrations.CriarTabelaUsuarios">
+            <inheritdoc />
+        </member>
+        <member name="M:webapicurso.Migrations.CriarTabelaUsuarios.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapicurso.Migrations.CriarTabelaUsuarios.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:webapicurso.Migrations.CriarTabelaUsuarios.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LivroController.ListarLivros">
+             <summary>
+             Exibe uma lista de todos os livros
+             </summary>
+             <param></param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET /Livro
+            
+             </remarks>
+             <response code="200">Retorna uma lista de livros</response>
+        </member>
+        <member name="M:LivroController.ListarLivrosPorIdAutor(System.Int32)">
+             <summary>
+             Exibe uma lista de todos os livros de um determinado autor
+             </summary>
+             <param name="idAutor">Numero de indentificacao do autor</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET Livro/autor/1
+            
+             </remarks>
+             <response code="200">Retorna uma lista de livros</response>
+        </member>
+        <member name="M:LivroController.BuscarLivroPorId(System.Int32)">
+             <summary>
+             Exibe informacoes de um livro de acordo com o ID dele
+             </summary>
+             <param name="idLivro">Numero de indentificacao do livro</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 GET /Livro/1
+            
+             </remarks>
+             <response code="200">Retorna todas as informacoes de um livro</response>
+        </member>
+        <member name="M:LivroController.CriarLivro(LivroDto)">
+             <summary>
+             Cadastra um novo livro
+             </summary>
+             <param></param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 POST /Livro {
+                     Nome:"Vinicius",
+                     Sobrenome:"Lima"
+                 }
+            
+             </remarks>
+             <response code="200">Retorna uma lista de livros</response>
+        </member>
+        <member name="M:LivroController.EditarLivro(System.Int32,LivroDto)">
+             <summary>
+             Atualiza os dados de um livro ja cadastrado
+             </summary>
+             <param name="idLivro">Numero de indentificacao do livro</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 PUT /Livro/1 {
+                     Titulo:"Pequeno principe"
+                 }
+            
+             </remarks>
+             <response code="200">Retorna uma lista de livros</response>
+        </member>
+        <member name="M:LivroController.ExcluirLivro(System.Int32)">
+             <summary>
+             Exclui o cadastro de um livro
+             </summary>
+             <param name="idLivro">Numero de indentificacao do livro</param>
+             <remarks>
+             Exemplo de requisição:
+            
+                 DELETE /Livro/1
+            
+             </remarks>
+             <response code="200">Retorna uma lista de livros</response>
+        </member>
+    </members>
+</doc>
